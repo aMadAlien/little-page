@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+button,a{cursor: pointer; background: none; border: none;}
 .wrapper{
     width: 1440px;
     max-width: 100%;
@@ -22,12 +23,6 @@ img{
 // ======================
 $purple: #721B65;
 $yellow: #FFD868;
-.description{
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    color: rgba(0, 0, 0, 0.6);
-}
 .btn-sales{
     font-weight: 500;
     font-size: 20px;
@@ -37,12 +32,29 @@ $yellow: #FFD868;
     height: 56px;
     border-radius: 10px;
     border: none;
-    background-color: $yellow;
+    color: #FFFFFF;
+    background-color: $purple;
+    transition: box-shadow 0.4s ease;
+    &:hover{
+        transition: box-shadow 0.4s ease;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    }
+}
+.title{
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 73px;
+    text-align: center;
+    color: $purple;
+}
+.description{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.6);
 }
 // ======================
-
 .main-screen {
-
     &__container {
         display: flex;
         justify-content: space-between;
@@ -77,11 +89,6 @@ $yellow: #FFD868;
         background: #FFFFFF;
     }
 
-    &__btn-sales {
-        color: #FFFFFF;
-        background-color: $purple;
-    }
-
     &__img {
         width: 570px;
         height: 814px;
@@ -89,17 +96,48 @@ $yellow: #FFD868;
         overflow: hidden;
     }
 }
+// ========================================
+.certificate {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px;
+    }
+
+    &__img {
+        width: 616px;
+        height: 538px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__info {
+        width: 546px;
+        max-width: 100%;
+        margin-left: 78px;
+        text-align: right;
+    }
+
+    &__title {
+        text-align: right;
+    }
+
+    &__description {
+        padding: 16px 0px 60px;
+    }
+}
+// ========================================
 .video-list {
     background-color: $yellow;
     padding: 30px 0px 40px;
-
-    &__title{
-        // padding: 30px 40px;
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
     }
-
     &__cards {
         display: flex;
-        flex-wrap: wrap;
         gap: 20px;
         padding: 40px 0;
     }
@@ -118,15 +156,16 @@ $yellow: #FFD868;
         font-size: 22px;
         line-height: 27px;
         text-align: center;
-        background-color: $purple;
         padding: 16px 20px;
+        color: #fff;
+        background-color: $purple;
     }
 
     &__learn-more {
-        font-weight: 500;
+        font-weight: 600;
         font-size: 20px;
         line-height: 24px;
-        text-align: center;
+        align-self: center;
         color: $purple;
     }
 }

@@ -3,6 +3,12 @@
   padding: 0;
 }
 
+button, a {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
 .wrapper {
   width: 1440px;
   max-width: 100%;
@@ -23,13 +29,6 @@ img {
   object-fit: cover;
 }
 
-.description {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  color: rgba(0, 0, 0, 0.6);
-}
-
 .btn-sales {
   font-weight: 500;
   font-size: 20px;
@@ -38,7 +37,28 @@ img {
   height: 56px;
   border-radius: 10px;
   border: none;
-  background-color: #FFD868;
+  color: #FFFFFF;
+  background-color: #721B65;
+  transition: box-shadow 0.4s ease;
+}
+.btn-sales:hover {
+  transition: box-shadow 0.4s ease;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.title {
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 73px;
+  text-align: center;
+  color: #721B65;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .main-screen__container {
@@ -69,10 +89,6 @@ img {
   color: #721B65;
   background: #FFFFFF;
 }
-.main-screen__btn-sales {
-  color: #FFFFFF;
-  background-color: #721B65;
-}
 .main-screen__img {
   width: 570px;
   height: 814px;
@@ -80,13 +96,42 @@ img {
   overflow: hidden;
 }
 
+.certificate__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+}
+.certificate__img {
+  width: 616px;
+  height: 538px;
+  position: relative;
+  overflow: hidden;
+}
+.certificate__info {
+  width: 546px;
+  max-width: 100%;
+  margin-left: 78px;
+  text-align: right;
+}
+.certificate__title {
+  text-align: right;
+}
+.certificate__description {
+  padding: 16px 0px 60px;
+}
+
 .video-list {
   background-color: #FFD868;
   padding: 30px 0px 40px;
 }
+.video-list__container {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
 .video-list__cards {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
   padding: 40px 0;
 }
@@ -102,13 +147,14 @@ img {
   font-size: 22px;
   line-height: 27px;
   text-align: center;
-  background-color: #721B65;
   padding: 16px 20px;
+  color: #fff;
+  background-color: #721B65;
 }
 .video-list__learn-more {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  text-align: center;
+  align-self: center;
   color: #721B65;
 }

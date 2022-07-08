@@ -1,20 +1,3 @@
-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-}
-
-.title {
-  font-weight: 500;
-  font-size: 60px;
-  line-height: 73px;
-  text-align: center;
-  color: #721B65;
-}
-
 .certificate__container {
   display: flex;
   justify-content: space-between;
@@ -35,4 +18,7 @@ img {
 }
 .certificate__title {
   text-align: right;
+}
+.certificate__description {
+  padding: 16px 0px 60px;
 }
