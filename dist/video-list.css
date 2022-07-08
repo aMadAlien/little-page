@@ -1,5 +1,5 @@
-.video-list__container {
-  background-color: #FFD868;
+.video-list {
+  background-color: #yellow;
 }
 .video-list__title {
   padding: 30px 40px;
@@ -7,13 +7,14 @@
 .video-list__cards {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 30px;
+  gap: 20px;
 }
 .video-list__card {
   width: 394px;
 }
 .video-list__img {
   height: 424px;
+  position: relative;
 }
 .video-list__description {
   font-weight: 500;
