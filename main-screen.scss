@@ -1,0 +1,78 @@
+img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+// ======================
+$purple: #721B65;
+.description{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.6);
+}
+.btn{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    width: 273px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+}
+// ======================
+
+.main-screen {
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 100px;
+        background-color: #FFD868;
+    }
+
+    &__info {
+        flex: 0 1 570px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 98px;
+        color: $purple;
+    }
+
+    &__description {
+        padding: 20px 0 30px;
+    }
+
+    &__btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    &__btn-learn-more {
+        color: $purple;
+        background: #FFFFFF;
+    }
+
+    &__btn-sales {
+        color: #FFFFFF;
+        background-color: $purple;
+    }
+
+    &__img {
+        width: 570px;
+        height: 814px;
+        position: relative;
+        overflow: hidden;
+    }
+}
+.container {
+}
