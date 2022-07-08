@@ -1,0 +1,38 @@
+img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 73px;
+  text-align: center;
+  color: #721B65;
+}
+
+.certificate__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+}
+.certificate__img {
+  width: 616px;
+  height: 538px;
+  position: relative;
+  overflow: hidden;
+}
+.certificate__info {
+  width: 546px;
+  max-width: 100%;
+  margin-left: 78px;
+  text-align: right;
+}
+.certificate__title {
+  text-align: right;
+}
