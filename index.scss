@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+button,a{cursor: pointer; background: none; border: none;text-decoration: none;}
+ul,ol,li{list-style:none;}
+.wrapper{
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.container {
+    width: 1240px;
+    margin: 0 auto;
+}
+img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+// =================================
+$purple: #721B65;
+$yellow: #FFD868;
+%box-shadow{
+    transition: box-shadow 0.4s ease;
+    &:hover{
+        transition: box-shadow 0.4s ease;
+        box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.25);
+    }
+}
+@mixin img($w, $h) {
+    width: $w;
+    height: $h;
+    position: relative;
+    overflow: hidden;
+}
+@mixin font($s, $w, $h) {
+    font-size: $s;
+    font-weight: $w;
+    line-height: $h;
+}
+@mixin flex($jc) {
+    display: flex;
+    justify-content: $jc;
+}
+.btn-sales{
+    @include font(20px, 500, 24px);
+
+    width: 273px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    background-color: $purple;
+    @extend %box-shadow;
+}
+.title{
+    @include font(60px, 500, 73px);
+    text-align: center;
+    color: $purple;
+}
+.description{
+    @include font(20px, 400, 24px);
+    padding: 16px 0px 60px;
+    color: rgba(0, 0, 0, 0.6);
+}
+// =================================
+.header {
+    background-color: $yellow;
+    &__container{
+        @include flex(space-between);
+        align-items: center;
+        height: 80px;
+    }
+
+    &__logo {
+        font-family: sans-serif;
+        font-size: 30px;
+        letter-spacing: 3.5px;
+        font-weight: 800;
+        color: $purple;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        @include font(20px, 600px, 24px);
+        margin: 0 25px;
+        color: rgba(0, 0, 0, 0.6);
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+// =================================
+.main-screen {
+    background-color: $yellow;
+    &__container {
+        @include flex(space-between);
+        align-items: center;
+    }
+
+    &__info {
+        flex: 0 1 570px;
+    }
+
+    &__title {
+        @include font(80px, 700, 98px);
+        color: $purple;
+    }
+
+    &__description {
+        padding: 20px 0 30px;
+    }
+
+    &__btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    &__btn-learn-more {
+        color: $purple;
+        background: #FFFFFF;
+    }
+
+    &__img {
+        @include img(570px,814px);
+    }
+}
+// ========================================
+.certificate {
+    &__container {
+        @include flex(space-between);
+        align-items: center;
+        padding: 100px 0;
+    }
+
+    &__img {
+        @include img(616px,538px);
+    }
+
+    &__info {
+        width: 546px;
+        max-width: 100%;
+        margin-left: 78px;
+        text-align: right;
+    }
+
+    &__title {
+        text-align: right;
+    }
+}
+// ========================================
+.video-list {
+    background-color: $yellow;
+    &__container{
+        padding: 30px 0px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+    }
+    &__cards {
+        display: flex;
+        gap: 20px;
+        padding: 40px 0;
+    }
+
+    &__card {
+        width: 394px;
+    }
+
+    &__img {
+        @include img(auto,338px);
+    }
+
+    &__description {
+        @include font(22px, 500, 27px);
+        text-align: center;
+        padding: 16px 20px;
+        color: #fff;
+        background-color: $purple;
+    }
+
+    &__learn-more {
+        @include font(24px, 600, 24px);
+        align-self: center;
+        color: $purple;
+    }
+}
+// ========================================
+.points {
+    &__container {
+        padding: 100px 0;
+    }
+    &__btn {
+        display: block;
+        margin: 0 auto;
+    }
+}
+// ========================================
+.footer {
+    &__container {
+        width: 433px;
+        padding: 25px 0px 50px;
+        @include flex(space-between);
+    }
+    &__img {
+        @include img(56px,56px);
+        border: 20px solid $purple;
+        border-radius: 50%;
+        background-color: $purple;
+        @extend %box-shadow;
+    }
+}
