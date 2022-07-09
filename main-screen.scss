@@ -37,7 +37,7 @@ $yellow: #FFD868;
     transition: box-shadow 0.4s ease;
     &:hover{
         transition: box-shadow 0.4s ease;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+        box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.25);
     }
 }
 .title{
@@ -51,6 +51,7 @@ $yellow: #FFD868;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
+    padding: 16px 0px 60px;
     color: rgba(0, 0, 0, 0.6);
 }
 // ======================
@@ -122,10 +123,6 @@ $yellow: #FFD868;
     &__title {
         text-align: right;
     }
-
-    &__description {
-        padding: 16px 0px 60px;
-    }
 }
 // ========================================
 .video-list {
@@ -167,5 +164,15 @@ $yellow: #FFD868;
         line-height: 24px;
         align-self: center;
         color: $purple;
+    }
+}
+// ========================================
+.points {
+    &__container {
+        padding: 100px 0;
+    }
+    &__btn {
+        display: block;
+        margin: 0 auto;
     }
 }
