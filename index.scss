@@ -2,20 +2,59 @@
     margin: 0;
     padding: 0;
 }
-ol, ul, li{list-style: none;} a{text-decoration: none;}
+button,a{cursor: pointer; background: none; border: none;}
 .wrapper{
     width: 1440px;
-    margin: 0 auto;
-    min-height: 100%;
-    overflow: hidden;
-}
-.container{
-    width: 1220px;
     max-width: 100%;
-    padding: 0px 100px;
+    margin: 0 auto;
 }
+.container {
+    width: 1240px;
+    margin: 0 auto;
+}
+img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+// ======================
+$purple: #721B65;
+$yellow: #FFD868;
+.btn-sales{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
 
-// HEADER ---------------------------------------------
+    width: 273px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    background-color: $purple;
+    transition: box-shadow 0.4s ease;
+    &:hover{
+        transition: box-shadow 0.4s ease;
+        box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.25);
+    }
+}
+.title{
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 73px;
+    text-align: center;
+    color: $purple;
+}
+.description{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 16px 0px 60px;
+    color: rgba(0, 0, 0, 0.6);
+}
+// =================================
 .header {
     &__container{
         @include flex($justifi-content);
@@ -41,5 +80,128 @@ ol, ul, li{list-style: none;} a{text-decoration: none;}
         @extend %box-shadow;
         margin: 0 25px;
         color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+// =================================
+.main-screen {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 100px;
+        background-color: $yellow;
+    }
+
+    &__info {
+        flex: 0 1 570px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 98px;
+        color: $purple;
+    }
+
+    &__description {
+        padding: 20px 0 30px;
+    }
+
+    &__btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    &__btn-learn-more {
+        color: $purple;
+        background: #FFFFFF;
+    }
+
+    &__img {
+        width: 570px;
+        height: 814px;
+        position: relative;
+        overflow: hidden;
+    }
+}
+// ========================================
+.certificate {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px;
+    }
+
+    &__img {
+        width: 616px;
+        height: 538px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__info {
+        width: 546px;
+        max-width: 100%;
+        margin-left: 78px;
+        text-align: right;
+    }
+
+    &__title {
+        text-align: right;
+    }
+}
+// ========================================
+.video-list {
+    background-color: $yellow;
+    padding: 30px 0px 40px;
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+    }
+    &__cards {
+        display: flex;
+        gap: 20px;
+        padding: 40px 0;
+    }
+
+    &__card {
+        width: 394px;
+    }
+
+    &__img {
+        height: 338px;
+        position: relative;
+    }
+
+    &__description {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 27px;
+        text-align: center;
+        padding: 16px 20px;
+        color: #fff;
+        background-color: $purple;
+    }
+
+    &__learn-more {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        align-self: center;
+        color: $purple;
+    }
+}
+// ========================================
+.points {
+    &__container {
+        padding: 100px 0;
+    }
+    &__btn {
+        display: block;
+        margin: 0 auto;
     }
 }
